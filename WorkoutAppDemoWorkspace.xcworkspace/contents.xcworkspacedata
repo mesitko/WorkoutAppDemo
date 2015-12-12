@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Utils">
+      <FileRef
+         location = "group:ServiceLocatorDI/ServiceLocatorDI.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Protocols">
+      <FileRef
+         location = "group:WorkoutProtocols/WorkoutProtocols.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Data Access Layer">
+      <FileRef
+         location = "group:WorkoutDALParse/WorkoutDALParse.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "App">
+      <FileRef
+         location = "group:WorkoutAppDemo/WorkoutAppDemo.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
