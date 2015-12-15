@@ -50,9 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E681DB61C1BA25B00F2969F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3E8527571C1BA02E00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E681DB61C1BA25B00F2969F /* Frameworks */,
 				3E8527631C1BA02E00F8825B /* WorkoutDALParse */,
 				3E85276F1C1BA02F00F8825B /* WorkoutDALParseTests */,
 				3E8527621C1BA02E00F8825B /* Products */,
@@ -376,6 +384,7 @@
 				3E8527771C1BA02F00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E8527781C1BA02F00F8825B /* Build configuration list for PBXNativeTarget "WorkoutDALParseTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +393,7 @@
 				3E85277A1C1BA02F00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

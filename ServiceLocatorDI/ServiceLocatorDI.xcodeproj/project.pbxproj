@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5B0EC81C1F9A4900292A8E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */; };
 		3E8527891C1BA07900F8825B /* ServiceLocatorDI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8527881C1BA07900F8825B /* ServiceLocatorDI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8527901C1BA07900F8825B /* ServiceLocatorDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */; };
 		3E8527951C1BA07900F8825B /* ServiceLocatorDITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527941C1BA07900F8825B /* ServiceLocatorDITests.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceLocatorDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8527881C1BA07900F8825B /* ServiceLocatorDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceLocatorDI.h; sourceTree = "<group>"; };
 		3E85278A1C1BA07900F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		3E85277B1C1BA07800F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */,
 				3E8527871C1BA07900F8825B /* ServiceLocatorDI */,
 				3E8527931C1BA07900F8825B /* ServiceLocatorDITests */,
 				3E8527861C1BA07900F8825B /* Products */,
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5B0EC81C1F9A4900292A8E /* ServiceLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		3E85279A1C1BA07900F8825B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sitko.ServiceLocatorDI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3E85279B1C1BA07900F8825B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +383,7 @@
 				3E85279B1C1BA07900F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E85279C1C1BA07900F8825B /* Build configuration list for PBXNativeTarget "ServiceLocatorDITests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +392,7 @@
 				3E85279E1C1BA07900F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5B0ECC1C1F9AB800292A8E /* ServiceLocatorDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EC91C1F9AB800292A8E /* ServiceLocatorDI.framework */; };
+		3E5B0ECD1C1F9AB800292A8E /* WorkoutDALParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ECA1C1F9AB800292A8E /* WorkoutDALParse.framework */; };
+		3E5B0ECE1C1F9AB800292A8E /* WorkoutProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ECB1C1F9AB800292A8E /* WorkoutProtocols.framework */; };
 		3E8527061C1B9FAA00F8825B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527051C1B9FAA00F8825B /* AppDelegate.swift */; };
 		3E8527081C1B9FAA00F8825B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527071C1B9FAA00F8825B /* ViewController.swift */; };
 		3E85270B1C1B9FAA00F8825B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8527091C1B9FAA00F8825B /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5B0EC91C1F9AB800292A8E /* ServiceLocatorDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceLocatorDI.framework; path = "../ServiceLocatorDI/build/Debug-iphoneos/ServiceLocatorDI.framework"; sourceTree = "<group>"; };
+		3E5B0ECA1C1F9AB800292A8E /* WorkoutDALParse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutDALParse.framework; path = "../WorkoutDALParse/build/Debug-iphoneos/WorkoutDALParse.framework"; sourceTree = "<group>"; };
+		3E5B0ECB1C1F9AB800292A8E /* WorkoutProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutProtocols.framework; path = "../WorkoutProtocols/build/Debug-iphoneos/WorkoutProtocols.framework"; sourceTree = "<group>"; };
 		3E8527021C1B9FAA00F8825B /* WorkoutAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8527051C1B9FAA00F8825B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8527071C1B9FAA00F8825B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5B0ECC1C1F9AB800292A8E /* ServiceLocatorDI.framework in Frameworks */,
+				3E5B0ECD1C1F9AB800292A8E /* WorkoutDALParse.framework in Frameworks */,
+				3E5B0ECE1C1F9AB800292A8E /* WorkoutProtocols.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,9 @@
 		3E8526F91C1B9FAA00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E5B0EC91C1F9AB800292A8E /* ServiceLocatorDI.framework */,
+				3E5B0ECA1C1F9AB800292A8E /* WorkoutDALParse.framework */,
+				3E5B0ECB1C1F9AB800292A8E /* WorkoutProtocols.framework */,
 				3E8527041C1B9FAA00F8825B /* WorkoutAppDemo */,
 				3E8527191C1B9FAA00F8825B /* WorkoutAppDemoTests */,
 				3E8527241C1B9FAA00F8825B /* WorkoutAppDemoUITests */,
@@ -484,6 +496,7 @@
 				3E85272C1C1B9FAA00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E85272D1C1B9FAA00F8825B /* Build configuration list for PBXNativeTarget "WorkoutAppDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				3E85272F1C1B9FAA00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E8527301C1B9FAA00F8825B /* Build configuration list for PBXNativeTarget "WorkoutAppDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				3E8527321C1B9FAA00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
