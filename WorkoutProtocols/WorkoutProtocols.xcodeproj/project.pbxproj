@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5B0ED01C1F9B7000292A8E /* PDALModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ECF1C1F9B7000292A8E /* PDALModule.swift */; };
+		3E5B0ED21C1F9B9D00292A8E /* PUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ED11C1F9B9D00292A8E /* PUser.swift */; };
+		3E5B0ED41C1F9BB900292A8E /* PSportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */; };
+		3E5B0ED61C1F9BF800292A8E /* PSportActivitiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ED51C1F9BF800292A8E /* PSportActivitiesRepository.swift */; };
 		3E8527411C1BA00E00F8825B /* WorkoutProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8527401C1BA00E00F8825B /* WorkoutProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8527481C1BA00E00F8825B /* WorkoutProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85273D1C1BA00E00F8825B /* WorkoutProtocols.framework */; };
 		3E85274D1C1BA00E00F8825B /* WorkoutProtocolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E85274C1C1BA00E00F8825B /* WorkoutProtocolsTests.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5B0ECF1C1F9B7000292A8E /* PDALModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDALModule.swift; sourceTree = "<group>"; };
+		3E5B0ED11C1F9B9D00292A8E /* PUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUser.swift; sourceTree = "<group>"; };
+		3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSportActivity.swift; sourceTree = "<group>"; };
+		3E5B0ED51C1F9BF800292A8E /* PSportActivitiesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSportActivitiesRepository.swift; sourceTree = "<group>"; };
 		3E85273D1C1BA00E00F8825B /* WorkoutProtocols.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WorkoutProtocols.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8527401C1BA00E00F8825B /* WorkoutProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutProtocols.h; sourceTree = "<group>"; };
 		3E8527421C1BA00E00F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 		3E8527331C1BA00E00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E5B0ED51C1F9BF800292A8E /* PSportActivitiesRepository.swift */,
+				3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */,
+				3E5B0ED11C1F9B9D00292A8E /* PUser.swift */,
+				3E5B0ECF1C1F9B7000292A8E /* PDALModule.swift */,
 				3E85273F1C1BA00E00F8825B /* WorkoutProtocols */,
 				3E85274B1C1BA00E00F8825B /* WorkoutProtocolsTests */,
 				3E85273E1C1BA00E00F8825B /* Products */,
@@ -194,6 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5B0ED61C1F9BF800292A8E /* PSportActivitiesRepository.swift in Sources */,
+				3E5B0ED01C1F9B7000292A8E /* PDALModule.swift in Sources */,
+				3E5B0ED41C1F9BB900292A8E /* PSportActivity.swift in Sources */,
+				3E5B0ED21C1F9B9D00292A8E /* PUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,7 @@
 		3E8527521C1BA00E00F8825B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +335,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sitko.WorkoutProtocols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3E8527531C1BA00E00F8825B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +395,7 @@
 				3E8527531C1BA00E00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E8527541C1BA00E00F8825B /* Build configuration list for PBXNativeTarget "WorkoutProtocolsTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +404,7 @@
 				3E8527561C1BA00E00F8825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
