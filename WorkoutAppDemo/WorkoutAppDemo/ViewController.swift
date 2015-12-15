@@ -6,9 +6,9 @@
 //  Copyright © 2015 Michal Sitko. All rights reserved.
 //
 
-import Parse
-import Bolts
-import WorkoutDALParse
+//import Parse
+//import Bolts
+//import WorkoutDALParse
 
 import UIKit
 import ServiceLocatorDI
@@ -20,39 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //let dalRepo = ServiceLocator.Get(PSportActivitiesRepository.self)
-        //dalRepo?.GetActiviies(NSDate(), endsAt: NSDate())
-        PFUser.logInWithUsernameInBackground("chuck.norris", password:"kick123") {
-            (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                // Do stuff after successful login.
-                var query = SportActivity.query()//PFQuery(className:"Cookie")
-                query!.limit = 10
-                query!.findObjectsInBackgroundWithBlock({
-                    (objects: [PFObject]?, error: NSError?) -> Void in
-                    
-                    if error == nil {
-                        // The find succeeded.
-                        print("Successfully retrieved \(objects!.count) scores.")
-                        // Do something with the found objects
-                        if let objects = objects {
-                            for object in objects {
-                                var act = object as! SportActivity
-                                print("type: \(act.type), \(act.startsAt) - \(act.endsAt)")
-                            }
-                        }
-                    } else {
-                        // Log details of the failure
-                        print("Error: \(error!) \(error!.userInfo)")
-                    }
-                    }
-                )
-            } else {
-                // The login failed. Check error to see why.
-                print("Error: \(error!) \(error!.userInfo)")
-                
-            }
-        }
+        let dalRepo = ServiceLocator.Get(PSportActivitiesRepository.self)
+        dalRepo?.GetActiviies(NSDate(), endsAt: NSDate())
+        
     }
 
     override func didReceiveMemoryWarning() {
