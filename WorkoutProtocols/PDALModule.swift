@@ -10,6 +10,6 @@ import Foundation
 
 public protocol PDALModule{
     func SetUp()->()
-    func LogIn(user: PUser) -> PUser
+    //func LogIn(user: PUser) -> PUser
     func LogOut()->()
 }

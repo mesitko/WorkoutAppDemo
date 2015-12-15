@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1B55231C1FA01B00682C5D /* DALModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B55221C1FA01B00682C5D /* DALModule.swift */; };
+		3E1B55251C1FA05A00682C5D /* WorkoutProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1B55241C1FA05A00682C5D /* WorkoutProtocols.framework */; };
+		3E1B55271C1FA13300682C5D /* SportActivitiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */; };
+		3E1B55291C1FA19700682C5D /* SportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B55281C1FA19700682C5D /* SportActivity.swift */; };
+		3E5B0ED91C1F9CD600292A8E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED71C1F9CD600292A8E /* Bolts.framework */; };
+		3E5B0EDA1C1F9CD600292A8E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED71C1F9CD600292A8E /* Bolts.framework */; };
+		3E5B0EDB1C1F9CD600292A8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED81C1F9CD600292A8E /* Parse.framework */; };
+		3E5B0EDC1C1F9CD600292A8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED81C1F9CD600292A8E /* Parse.framework */; };
+		3E5B0EDE1C1F9D9100292A8E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EDD1C1F9D9100292A8E /* AudioToolbox.framework */; };
+		3E5B0EE01C1F9D9D00292A8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EDF1C1F9D9D00292A8E /* CFNetwork.framework */; };
+		3E5B0EE21C1F9DA800292A8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EE11C1F9DA800292A8E /* CoreGraphics.framework */; };
+		3E5B0EE41C1F9DB400292A8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EE31C1F9DB400292A8E /* CoreLocation.framework */; };
+		3E5B0EE61C1F9DC000292A8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EE51C1F9DC000292A8E /* QuartzCore.framework */; };
+		3E5B0EE81C1F9DCA00292A8E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EE71C1F9DCA00292A8E /* Security.framework */; };
+		3E5B0EEA1C1F9DD300292A8E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EE91C1F9DD300292A8E /* StoreKit.framework */; };
+		3E5B0EEC1C1F9DE200292A8E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EEB1C1F9DE200292A8E /* SystemConfiguration.framework */; };
+		3E5B0EEE1C1F9DEE00292A8E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EED1C1F9DEE00292A8E /* libz.tbd */; };
+		3E5B0EF01C1F9DFB00292A8E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0EEF1C1F9DFB00292A8E /* libsqlite3.tbd */; };
 		3E8527651C1BA02E00F8825B /* WorkoutDALParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8527641C1BA02E00F8825B /* WorkoutDALParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E85276C1C1BA02F00F8825B /* WorkoutDALParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8527611C1BA02E00F8825B /* WorkoutDALParse.framework */; };
 		3E8527711C1BA02F00F8825B /* WorkoutDALParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527701C1BA02F00F8825B /* WorkoutDALParseTests.swift */; };
@@ -23,6 +41,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E1B55221C1FA01B00682C5D /* DALModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DALModule.swift; sourceTree = "<group>"; };
+		3E1B55241C1FA05A00682C5D /* WorkoutProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutProtocols.framework; path = "../WorkoutProtocols/build/Debug-iphoneos/WorkoutProtocols.framework"; sourceTree = "<group>"; };
+		3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportActivitiesRepository.swift; sourceTree = "<group>"; };
+		3E1B55281C1FA19700682C5D /* SportActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportActivity.swift; sourceTree = "<group>"; };
+		3E5B0ED71C1F9CD600292A8E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3E5B0ED81C1F9CD600292A8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3E5B0EDD1C1F9D9100292A8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3E5B0EDF1C1F9D9D00292A8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E5B0EE11C1F9DA800292A8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E5B0EE31C1F9DB400292A8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3E5B0EE51C1F9DC000292A8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E5B0EE71C1F9DCA00292A8E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3E5B0EE91C1F9DD300292A8E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3E5B0EEB1C1F9DE200292A8E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3E5B0EED1C1F9DEE00292A8E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3E5B0EEF1C1F9DFB00292A8E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3E8527611C1BA02E00F8825B /* WorkoutDALParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WorkoutDALParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8527641C1BA02E00F8825B /* WorkoutDALParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutDALParse.h; sourceTree = "<group>"; };
 		3E8527661C1BA02E00F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +70,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1B55251C1FA05A00682C5D /* WorkoutProtocols.framework in Frameworks */,
+				3E5B0EF01C1F9DFB00292A8E /* libsqlite3.tbd in Frameworks */,
+				3E5B0EEE1C1F9DEE00292A8E /* libz.tbd in Frameworks */,
+				3E5B0EEC1C1F9DE200292A8E /* SystemConfiguration.framework in Frameworks */,
+				3E5B0EEA1C1F9DD300292A8E /* StoreKit.framework in Frameworks */,
+				3E5B0EE81C1F9DCA00292A8E /* Security.framework in Frameworks */,
+				3E5B0EE61C1F9DC000292A8E /* QuartzCore.framework in Frameworks */,
+				3E5B0EE41C1F9DB400292A8E /* CoreLocation.framework in Frameworks */,
+				3E5B0EE21C1F9DA800292A8E /* CoreGraphics.framework in Frameworks */,
+				3E5B0EE01C1F9D9D00292A8E /* CFNetwork.framework in Frameworks */,
+				3E5B0EDE1C1F9D9100292A8E /* AudioToolbox.framework in Frameworks */,
+				3E5B0EDB1C1F9CD600292A8E /* Parse.framework in Frameworks */,
+				3E5B0ED91C1F9CD600292A8E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +91,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E85276C1C1BA02F00F8825B /* WorkoutDALParse.framework in Frameworks */,
+				3E5B0EDC1C1F9CD600292A8E /* Parse.framework in Frameworks */,
+				3E5B0EDA1C1F9CD600292A8E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +102,17 @@
 		3E681DB61C1BA25B00F2969F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E1B55241C1FA05A00682C5D /* WorkoutProtocols.framework */,
+				3E5B0EEF1C1F9DFB00292A8E /* libsqlite3.tbd */,
+				3E5B0EED1C1F9DEE00292A8E /* libz.tbd */,
+				3E5B0EEB1C1F9DE200292A8E /* SystemConfiguration.framework */,
+				3E5B0EE91C1F9DD300292A8E /* StoreKit.framework */,
+				3E5B0EE71C1F9DCA00292A8E /* Security.framework */,
+				3E5B0EE51C1F9DC000292A8E /* QuartzCore.framework */,
+				3E5B0EE31C1F9DB400292A8E /* CoreLocation.framework */,
+				3E5B0EE11C1F9DA800292A8E /* CoreGraphics.framework */,
+				3E5B0EDF1C1F9D9D00292A8E /* CFNetwork.framework */,
+				3E5B0EDD1C1F9D9100292A8E /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -60,6 +120,8 @@
 		3E8527571C1BA02E00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E5B0ED71C1F9CD600292A8E /* Bolts.framework */,
+				3E5B0ED81C1F9CD600292A8E /* Parse.framework */,
 				3E681DB61C1BA25B00F2969F /* Frameworks */,
 				3E8527631C1BA02E00F8825B /* WorkoutDALParse */,
 				3E85276F1C1BA02F00F8825B /* WorkoutDALParseTests */,
@@ -81,6 +143,9 @@
 			children = (
 				3E8527641C1BA02E00F8825B /* WorkoutDALParse.h */,
 				3E8527661C1BA02E00F8825B /* Info.plist */,
+				3E1B55221C1FA01B00682C5D /* DALModule.swift */,
+				3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */,
+				3E1B55281C1FA19700682C5D /* SportActivity.swift */,
 			);
 			path = WorkoutDALParse;
 			sourceTree = "<group>";
@@ -150,7 +215,7 @@
 		3E8527581C1BA02E00F8825B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Michal Sitko";
 				TargetAttributes = {
@@ -202,6 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1B55291C1FA19700682C5D /* SportActivity.swift in Sources */,
+				3E1B55231C1FA01B00682C5D /* DALModule.swift in Sources */,
+				3E1B55271C1FA13300682C5D /* SportActivitiesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,26 +384,37 @@
 		3E8527761C1BA02F00F8825B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkoutDALParse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sitko.WorkoutDALParse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3E8527771C1BA02F00F8825B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkoutDALParse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -348,6 +427,10 @@
 		3E8527791C1BA02F00F8825B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkoutDALParseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sitko.WorkoutDALParseTests;
@@ -358,6 +441,10 @@
 		3E85277A1C1BA02F00F8825B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkoutDALParseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sitko.WorkoutDALParseTests;

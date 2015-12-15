@@ -8,6 +8,14 @@
 
 import UIKit
 
+import Parse
+import Bolts
+
+
+import ServiceLocatorDI
+import WorkoutProtocols
+import WorkoutDALParse
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        /*
+        ServiceLocator.Register({()->PDALModule in return DALModule() })
+        ServiceLocator.Register({()->PSportActivitiesRepository in return SportActivitiesRepository() })
+        
+        let dalModule = ServiceLocator.Get(PDALModule.self)
+        
+        dalModule?.SetUp()
+        */
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("7gwmIKcCH00O9C21u1rEhwvnihsZkflY24rD1PEH",
+            clientKey: "d4INr8zQ9ICM3jaViDrCHXv2i7smrxE6sTKslRE9")
+
+        
+        
         return true
     }
 
