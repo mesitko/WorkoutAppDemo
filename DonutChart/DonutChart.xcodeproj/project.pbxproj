@@ -7,187 +7,183 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E25F1E91C22372E0030519D /* delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25F1E81C22372E0030519D /* delay.swift */; };
-		3E25F1EA1C22372E0030519D /* delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25F1E81C22372E0030519D /* delay.swift */; };
-		3E5B0EC81C1F9A4900292A8E /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */; };
-		3E8527891C1BA07900F8825B /* ServiceLocatorDI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8527881C1BA07900F8825B /* ServiceLocatorDI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E8527901C1BA07900F8825B /* ServiceLocatorDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */; };
-		3E8527951C1BA07900F8825B /* ServiceLocatorDITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527941C1BA07900F8825B /* ServiceLocatorDITests.swift */; };
+		3E25F1F91C2238D20030519D /* DonutChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E25F1F81C2238D20030519D /* DonutChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E25F2001C2238D20030519D /* DonutChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E25F1F51C2238D20030519D /* DonutChart.framework */; };
+		3E25F2051C2238D20030519D /* DonutChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25F2041C2238D20030519D /* DonutChartTests.swift */; };
+		3E97095A1C22397F000F7E9D /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9709591C22397F000F7E9D /* DonutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E8527911C1BA07900F8825B /* PBXContainerItemProxy */ = {
+		3E25F2011C2238D20030519D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3E85277C1C1BA07800F8825B /* Project object */;
+			containerPortal = 3E25F1EC1C2238D20030519D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3E8527841C1BA07900F8825B;
-			remoteInfo = ServiceLocatorDI;
+			remoteGlobalIDString = 3E25F1F41C2238D20030519D;
+			remoteInfo = DonutChart;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E25F1E81C22372E0030519D /* delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = delay.swift; sourceTree = "<group>"; };
-		3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
-		3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServiceLocatorDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E8527881C1BA07900F8825B /* ServiceLocatorDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceLocatorDI.h; sourceTree = "<group>"; };
-		3E85278A1C1BA07900F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E85278F1C1BA07900F8825B /* ServiceLocatorDITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceLocatorDITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E8527941C1BA07900F8825B /* ServiceLocatorDITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocatorDITests.swift; sourceTree = "<group>"; };
-		3E8527961C1BA07900F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E25F1F51C2238D20030519D /* DonutChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DonutChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E25F1F81C2238D20030519D /* DonutChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DonutChart.h; sourceTree = "<group>"; };
+		3E25F1FA1C2238D20030519D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E25F1FF1C2238D20030519D /* DonutChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonutChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E25F2041C2238D20030519D /* DonutChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartTests.swift; sourceTree = "<group>"; };
+		3E25F2061C2238D20030519D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E9709591C22397F000F7E9D /* DonutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3E8527811C1BA07900F8825B /* Frameworks */ = {
+		3E25F1F11C2238D20030519D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E85278C1C1BA07900F8825B /* Frameworks */ = {
+		3E25F1FC1C2238D20030519D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8527901C1BA07900F8825B /* ServiceLocatorDI.framework in Frameworks */,
+				3E25F2001C2238D20030519D /* DonutChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E85277B1C1BA07800F8825B = {
+		3E25F1EB1C2238D20030519D = {
 			isa = PBXGroup;
 			children = (
-				3E25F1E81C22372E0030519D /* delay.swift */,
-				3E5B0EC71C1F9A4900292A8E /* ServiceLocator.swift */,
-				3E8527871C1BA07900F8825B /* ServiceLocatorDI */,
-				3E8527931C1BA07900F8825B /* ServiceLocatorDITests */,
-				3E8527861C1BA07900F8825B /* Products */,
+				3E25F1F71C2238D20030519D /* DonutChart */,
+				3E25F2031C2238D20030519D /* DonutChartTests */,
+				3E25F1F61C2238D20030519D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3E8527861C1BA07900F8825B /* Products */ = {
+		3E25F1F61C2238D20030519D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */,
-				3E85278F1C1BA07900F8825B /* ServiceLocatorDITests.xctest */,
+				3E25F1F51C2238D20030519D /* DonutChart.framework */,
+				3E25F1FF1C2238D20030519D /* DonutChartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E8527871C1BA07900F8825B /* ServiceLocatorDI */ = {
+		3E25F1F71C2238D20030519D /* DonutChart */ = {
 			isa = PBXGroup;
 			children = (
-				3E8527881C1BA07900F8825B /* ServiceLocatorDI.h */,
-				3E85278A1C1BA07900F8825B /* Info.plist */,
+				3E25F1F81C2238D20030519D /* DonutChart.h */,
+				3E25F1FA1C2238D20030519D /* Info.plist */,
+				3E9709591C22397F000F7E9D /* DonutView.swift */,
 			);
-			path = ServiceLocatorDI;
+			path = DonutChart;
 			sourceTree = "<group>";
 		};
-		3E8527931C1BA07900F8825B /* ServiceLocatorDITests */ = {
+		3E25F2031C2238D20030519D /* DonutChartTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E8527941C1BA07900F8825B /* ServiceLocatorDITests.swift */,
-				3E8527961C1BA07900F8825B /* Info.plist */,
+				3E25F2041C2238D20030519D /* DonutChartTests.swift */,
+				3E25F2061C2238D20030519D /* Info.plist */,
 			);
-			path = ServiceLocatorDITests;
+			path = DonutChartTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3E8527821C1BA07900F8825B /* Headers */ = {
+		3E25F1F21C2238D20030519D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8527891C1BA07900F8825B /* ServiceLocatorDI.h in Headers */,
+				3E25F1F91C2238D20030519D /* DonutChart.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3E8527841C1BA07900F8825B /* ServiceLocatorDI */ = {
+		3E25F1F41C2238D20030519D /* DonutChart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E8527991C1BA07900F8825B /* Build configuration list for PBXNativeTarget "ServiceLocatorDI" */;
+			buildConfigurationList = 3E25F2091C2238D20030519D /* Build configuration list for PBXNativeTarget "DonutChart" */;
 			buildPhases = (
-				3E8527801C1BA07900F8825B /* Sources */,
-				3E8527811C1BA07900F8825B /* Frameworks */,
-				3E8527821C1BA07900F8825B /* Headers */,
-				3E8527831C1BA07900F8825B /* Resources */,
+				3E25F1F01C2238D20030519D /* Sources */,
+				3E25F1F11C2238D20030519D /* Frameworks */,
+				3E25F1F21C2238D20030519D /* Headers */,
+				3E25F1F31C2238D20030519D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ServiceLocatorDI;
-			productName = ServiceLocatorDI;
-			productReference = 3E8527851C1BA07900F8825B /* ServiceLocatorDI.framework */;
+			name = DonutChart;
+			productName = DonutChart;
+			productReference = 3E25F1F51C2238D20030519D /* DonutChart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3E85278E1C1BA07900F8825B /* ServiceLocatorDITests */ = {
+		3E25F1FE1C2238D20030519D /* DonutChartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E85279C1C1BA07900F8825B /* Build configuration list for PBXNativeTarget "ServiceLocatorDITests" */;
+			buildConfigurationList = 3E25F20C1C2238D20030519D /* Build configuration list for PBXNativeTarget "DonutChartTests" */;
 			buildPhases = (
-				3E85278B1C1BA07900F8825B /* Sources */,
-				3E85278C1C1BA07900F8825B /* Frameworks */,
-				3E85278D1C1BA07900F8825B /* Resources */,
+				3E25F1FB1C2238D20030519D /* Sources */,
+				3E25F1FC1C2238D20030519D /* Frameworks */,
+				3E25F1FD1C2238D20030519D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3E8527921C1BA07900F8825B /* PBXTargetDependency */,
+				3E25F2021C2238D20030519D /* PBXTargetDependency */,
 			);
-			name = ServiceLocatorDITests;
-			productName = ServiceLocatorDITests;
-			productReference = 3E85278F1C1BA07900F8825B /* ServiceLocatorDITests.xctest */;
+			name = DonutChartTests;
+			productName = DonutChartTests;
+			productReference = 3E25F1FF1C2238D20030519D /* DonutChartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3E85277C1C1BA07800F8825B /* Project object */ = {
+		3E25F1EC1C2238D20030519D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michal Sitko";
 				TargetAttributes = {
-					3E8527841C1BA07900F8825B = {
-						CreatedOnToolsVersion = 7.1.1;
+					3E25F1F41C2238D20030519D = {
+						CreatedOnToolsVersion = 7.2;
 					};
-					3E85278E1C1BA07900F8825B = {
-						CreatedOnToolsVersion = 7.1.1;
+					3E25F1FE1C2238D20030519D = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = 3E85277F1C1BA07800F8825B /* Build configuration list for PBXProject "ServiceLocatorDI" */;
+			buildConfigurationList = 3E25F1EF1C2238D20030519D /* Build configuration list for PBXProject "DonutChart" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3E85277B1C1BA07800F8825B;
-			productRefGroup = 3E8527861C1BA07900F8825B /* Products */;
+			mainGroup = 3E25F1EB1C2238D20030519D;
+			productRefGroup = 3E25F1F61C2238D20030519D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E8527841C1BA07900F8825B /* ServiceLocatorDI */,
-				3E85278E1C1BA07900F8825B /* ServiceLocatorDITests */,
+				3E25F1F41C2238D20030519D /* DonutChart */,
+				3E25F1FE1C2238D20030519D /* DonutChartTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3E8527831C1BA07900F8825B /* Resources */ = {
+		3E25F1F31C2238D20030519D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E85278D1C1BA07900F8825B /* Resources */ = {
+		3E25F1FD1C2238D20030519D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -197,36 +193,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E8527801C1BA07900F8825B /* Sources */ = {
+		3E25F1F01C2238D20030519D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5B0EC81C1F9A4900292A8E /* ServiceLocator.swift in Sources */,
-				3E25F1E91C22372E0030519D /* delay.swift in Sources */,
+				3E97095A1C22397F000F7E9D /* DonutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E85278B1C1BA07900F8825B /* Sources */ = {
+		3E25F1FB1C2238D20030519D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8527951C1BA07900F8825B /* ServiceLocatorDITests.swift in Sources */,
-				3E25F1EA1C22372E0030519D /* delay.swift in Sources */,
+				3E25F2051C2238D20030519D /* DonutChartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3E8527921C1BA07900F8825B /* PBXTargetDependency */ = {
+		3E25F2021C2238D20030519D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3E8527841C1BA07900F8825B /* ServiceLocatorDI */;
-			targetProxy = 3E8527911C1BA07900F8825B /* PBXContainerItemProxy */;
+			target = 3E25F1F41C2238D20030519D /* DonutChart */;
+			targetProxy = 3E25F2011C2238D20030519D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3E8527971C1BA07900F8825B /* Debug */ = {
+		3E25F2071C2238D20030519D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -274,7 +268,7 @@
 			};
 			name = Debug;
 		};
-		3E8527981C1BA07900F8825B /* Release */ = {
+		3E25F2081C2238D20030519D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -305,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +309,7 @@
 			};
 			name = Release;
 		};
-		3E85279A1C1BA07900F8825B /* Debug */ = {
+		3E25F20A1C2238D20030519D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -323,17 +317,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ServiceLocatorDI/Info.plist;
+				INFOPLIST_FILE = DonutChart/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sitko.ServiceLocatorDI;
+				PRODUCT_BUNDLE_IDENTIFIER = sitko.DonutChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		3E85279B1C1BA07900F8825B /* Release */ = {
+		3E25F20B1C2238D20030519D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -341,31 +336,32 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ServiceLocatorDI/Info.plist;
+				INFOPLIST_FILE = DonutChart/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sitko.ServiceLocatorDI;
+				PRODUCT_BUNDLE_IDENTIFIER = sitko.DonutChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		3E85279D1C1BA07900F8825B /* Debug */ = {
+		3E25F20D1C2238D20030519D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ServiceLocatorDITests/Info.plist;
+				INFOPLIST_FILE = DonutChartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sitko.ServiceLocatorDITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sitko.DonutChartTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3E85279E1C1BA07900F8825B /* Release */ = {
+		3E25F20E1C2238D20030519D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ServiceLocatorDITests/Info.plist;
+				INFOPLIST_FILE = DonutChartTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sitko.ServiceLocatorDITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sitko.DonutChartTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -373,34 +369,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E85277F1C1BA07800F8825B /* Build configuration list for PBXProject "ServiceLocatorDI" */ = {
+		3E25F1EF1C2238D20030519D /* Build configuration list for PBXProject "DonutChart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E8527971C1BA07900F8825B /* Debug */,
-				3E8527981C1BA07900F8825B /* Release */,
+				3E25F2071C2238D20030519D /* Debug */,
+				3E25F2081C2238D20030519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E8527991C1BA07900F8825B /* Build configuration list for PBXNativeTarget "ServiceLocatorDI" */ = {
+		3E25F2091C2238D20030519D /* Build configuration list for PBXNativeTarget "DonutChart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E85279A1C1BA07900F8825B /* Debug */,
-				3E85279B1C1BA07900F8825B /* Release */,
+				3E25F20A1C2238D20030519D /* Debug */,
+				3E25F20B1C2238D20030519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E85279C1C1BA07900F8825B /* Build configuration list for PBXNativeTarget "ServiceLocatorDITests" */ = {
+		3E25F20C1C2238D20030519D /* Build configuration list for PBXNativeTarget "DonutChartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E85279D1C1BA07900F8825B /* Debug */,
-				3E85279E1C1BA07900F8825B /* Release */,
+				3E25F20D1C2238D20030519D /* Debug */,
+				3E25F20E1C2238D20030519D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3E85277C1C1BA07800F8825B /* Project object */;
+	rootObject = 3E25F1EC1C2238D20030519D /* Project object */;
 }

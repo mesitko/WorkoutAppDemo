@@ -31,6 +31,7 @@
 		3E8527101C1B9FAA00F8825B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E85270E1C1B9FAA00F8825B /* LaunchScreen.storyboard */; };
 		3E85271B1C1B9FAA00F8825B /* WorkoutAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E85271A1C1B9FAA00F8825B /* WorkoutAppDemoTests.swift */; };
 		3E8527261C1B9FAA00F8825B /* WorkoutAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8527251C1B9FAA00F8825B /* WorkoutAppDemoUITests.swift */; };
+		3E97095C1C2239D2000F7E9D /* DonutChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E97095B1C2239D2000F7E9D /* DonutChart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		3E8527211C1B9FAA00F8825B /* WorkoutAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8527251C1B9FAA00F8825B /* WorkoutAppDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAppDemoUITests.swift; sourceTree = "<group>"; };
 		3E8527271C1B9FAA00F8825B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E97095B1C2239D2000F7E9D /* DonutChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonutChart.framework; path = "../DonutChart/build/Debug-iphoneos/DonutChart.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E97095C1C2239D2000F7E9D /* DonutChart.framework in Frameworks */,
 				3E1B55431C1FA4F900682C5D /* libsqlite3.tbd in Frameworks */,
 				3E1B55411C1FA4EF00682C5D /* libz.tbd in Frameworks */,
 				3E1B553F1C1FA4E000682C5D /* SystemConfiguration.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		3E8526F91C1B9FAA00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E97095B1C2239D2000F7E9D /* DonutChart.framework */,
 				3E1B55421C1FA4F900682C5D /* libsqlite3.tbd */,
 				3E1B55401C1FA4EF00682C5D /* libz.tbd */,
 				3E1B553E1C1FA4E000682C5D /* SystemConfiguration.framework */,

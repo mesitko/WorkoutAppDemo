@@ -20,7 +20,11 @@ public  class SportActivitiesRepository: PSportActivitiesRepository{
             if user != nil {
                 // Do stuff after successful login.
                 var query = SportActivity.query()//PFQuery(className:"Cookie")
-                query!.limit = 10
+                //query!.limit = 1000
+                query!.skip = 10
+                var errPoint = NSErrorPointer()
+                var countAll = query!.countObjects(errPoint)
+                print("All: \(countAll)")
                 query!.findObjectsInBackgroundWithBlock({
                     (objects: [PFObject]?, error: NSError?) -> Void in
                     
