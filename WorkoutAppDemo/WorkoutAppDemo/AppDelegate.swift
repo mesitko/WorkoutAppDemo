@@ -30,16 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let dalModule = ServiceLocator.Get(PDALModule.self)
         
-        dalModule!.SetUp()
+        //dalModule!.SetUp()
 
-        /*
+        
         Parse.enableLocalDatastore()
         
         // Initialize Parse.
         Parse.setApplicationId("7gwmIKcCH00O9C21u1rEhwvnihsZkflY24rD1PEH",
             clientKey: "d4INr8zQ9ICM3jaViDrCHXv2i7smrxE6sTKslRE9")
 
-        */
+        
         
         return true
     }

@@ -54,4 +54,10 @@ public  class SportActivitiesRepository: PSportActivitiesRepository{
     public init(){
         
     }
+    
+    
+    //------------
+    public func InsertImage(){
+        
+    }
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2015 Michal Sitko. All rights reserved.
 //
 
-//import Parse
-//import Bolts
+import Parse
+import Bolts
 //import WorkoutDALParse
 
 import UIKit
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         let dalRepo = ServiceLocator.Get(PSportActivitiesRepository.self)
         //dalRepo?.GetActiviies(NSDate(), endsAt: NSDate())
         
+        /*
         let chartView = DonutView(frame: CGRect(x:50.0, y:50.0, width: 250.0, height: 250.0))
         self.view.addSubview(chartView)
         //chartView.animateCircle(10)
@@ -36,11 +37,43 @@ class ViewController: UIViewController {
         
         delay(6){
             print("it is time!")
-            chartView.animateClear(3)
+            chartView.animateClear(1)
+        }
+        */
+        
+        PFUser.logInWithUsernameInBackground("bruce.lee", password:"hit123") {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                print("Loggend in")
+                
+                var currentUser = PFUser.currentUser()
+                var photo = currentUser!["profilePhoto"] as! PFFile
+                var image = try! UIImage(data: photo.getData())
+                
+                
+                let chartView = DonutView(frame: CGRect(x:50.0, y:50.0, width: 250.0, height: 250.0))
+                self.view.addSubview(chartView)
+                //chartView.animateCircle(10)
+                
+                let data = ["running": 0.5, "karate":0.3, "swimming" : 0.2]
+                let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.blackColor(), UIColor.yellowColor()]
+                
+                chartView.defineDate( data, colors: colors, userImage: image!)
+                chartView.animeteChart(3)
+                
+                delay(6){
+                    print("it is time!")
+                    chartView.animateClear(1)
+                }
+
+            } else {
+                print("Connot login")
+            }
         }
         
-        
     }
+    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

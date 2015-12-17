@@ -11,34 +11,48 @@ import Foundation
 
 public class DonutView : UIView{
     
-    
+    //dictionary: activity - value, ex. runnint - 0.55 -> this means runnint 55%
     var data : [String: Double]?
+    // colors for each activities
     var colors: [UIColor]?
     
+    var imageView : UIImageView?
+    
+    var userPhoto : UIImage?
     
     public override init(frame: CGRect){
         
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
-        
-        
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        
         super.init(coder: aDecoder)
-        
     }
     
     
     
-    public func defineDate(data : [String : Double], colors: [UIColor]){
+    
+    // define data for chart
+    public func defineDate(data : [String : Double], colors: [UIColor], userImage: UIImage){
         self.data = data
         self.colors = colors
+        self.userPhoto = userImage
     }
     
     
+    // animate chart
     public func animeteChart(duration: NSTimeInterval){
+        
+        let width = CGFloat( Float(frame.size.width) - 50.0)
+        let height = CGFloat(Float(frame.size.height) - 50.0)
+        self.imageView = UIImageView(frame: CGRect(x: 25.0, y: 25.0, width: width, height: height))
+        self.imageView!.image = self.userPhoto
+        self.imageView!.alpha = 0.0
+        self.addSubview(self.imageView!)
+        UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.imageView!.alpha = 1.0
+            }, completion: nil)
         
         var progress = 0.0
         let cyrcleStart = (M_PI * 0.5)
@@ -76,14 +90,20 @@ public class DonutView : UIView{
             animation.beginTime = CACurrentMediaTime() + progress * duration
             print("part: \(part.0): \(part.1) begin time: \(CACurrentMediaTime() + progress * duration)")
             
-            
             partLayer.addAnimation(animation, forKey: part.0)
             step++
             progress += part.1
         }
     }
     
+    
+    // rollback animation
     public func animateClear(duration: NSTimeInterval){
+        
+        UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.imageView!.alpha = 0.0
+            }, completion: nil)
+        
         let cyrcleStart = (M_PI * 2.5)
         let cyrcleEnd = (M_PI * 0.5)
         let partLayer = CAShapeLayer()
@@ -114,9 +134,6 @@ public class DonutView : UIView{
         
         
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        
-        
-        
         
         partLayer.addAnimation(animation, forKey: "clear")
     }
