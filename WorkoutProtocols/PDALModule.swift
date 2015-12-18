@@ -12,4 +12,5 @@ public protocol PDALModule{
     func SetUp()->()
     //func LogIn(user: PUser) -> PUser
     func LogOut()->()
+    func CurrentUser()->(PUser?)
 }

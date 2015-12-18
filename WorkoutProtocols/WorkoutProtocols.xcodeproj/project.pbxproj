@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3409FC1C24B30B00DD5431 /* PUserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3409FB1C24B30B00DD5431 /* PUserRepo.swift */; };
+		3E3409FE1C24B46E00DD5431 /* PLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3409FD1C24B46E00DD5431 /* PLogInViewController.swift */; };
 		3E5B0ED01C1F9B7000292A8E /* PDALModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ECF1C1F9B7000292A8E /* PDALModule.swift */; };
 		3E5B0ED21C1F9B9D00292A8E /* PUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ED11C1F9B9D00292A8E /* PUser.swift */; };
 		3E5B0ED41C1F9BB900292A8E /* PSportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3409FB1C24B30B00DD5431 /* PUserRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUserRepo.swift; sourceTree = "<group>"; };
+		3E3409FD1C24B46E00DD5431 /* PLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLogInViewController.swift; sourceTree = "<group>"; };
 		3E5B0ECF1C1F9B7000292A8E /* PDALModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDALModule.swift; sourceTree = "<group>"; };
 		3E5B0ED11C1F9B9D00292A8E /* PUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PUser.swift; sourceTree = "<group>"; };
 		3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSportActivity.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		3E8527331C1BA00E00F8825B = {
 			isa = PBXGroup;
 			children = (
+				3E3409FD1C24B46E00DD5431 /* PLogInViewController.swift */,
+				3E3409FB1C24B30B00DD5431 /* PUserRepo.swift */,
 				3E5B0ED51C1F9BF800292A8E /* PSportActivitiesRepository.swift */,
 				3E5B0ED31C1F9BB900292A8E /* PSportActivity.swift */,
 				3E5B0ED11C1F9B9D00292A8E /* PUser.swift */,
@@ -208,8 +214,10 @@
 			files = (
 				3E5B0ED61C1F9BF800292A8E /* PSportActivitiesRepository.swift in Sources */,
 				3E5B0ED01C1F9B7000292A8E /* PDALModule.swift in Sources */,
+				3E3409FC1C24B30B00DD5431 /* PUserRepo.swift in Sources */,
 				3E5B0ED41C1F9BB900292A8E /* PSportActivity.swift in Sources */,
 				3E5B0ED21C1F9B9D00292A8E /* PUser.swift in Sources */,
+				3E3409FE1C24B46E00DD5431 /* PLogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

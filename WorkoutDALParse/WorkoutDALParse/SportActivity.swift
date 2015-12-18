@@ -12,7 +12,7 @@ import WorkoutProtocols
 import Parse
 import Bolts
 
-public class SportActivity : PFObject, PFSubclassing {
+public class SportActivity : PFObject, PFSubclassing, PSportActivity {
     public override class func initialize() {
         struct Static {
             static var onceToken : dispatch_once_t = 0;

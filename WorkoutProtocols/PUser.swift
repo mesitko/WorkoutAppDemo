@@ -10,5 +10,7 @@ import Foundation
 
 public protocol PUser{
     var userName : String {get set}
-    var password : String {get set}
+    //var password : String {get set}
+    var photo : UIImage? {get set}
 }
+

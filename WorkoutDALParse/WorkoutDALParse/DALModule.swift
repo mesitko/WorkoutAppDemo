@@ -19,9 +19,6 @@ public class DALModule : PDALModule{
         // Initialize Parse.
         Parse.setApplicationId("7gwmIKcCH00O9C21u1rEhwvnihsZkflY24rD1PEH",
             clientKey: "d4INr8zQ9ICM3jaViDrCHXv2i7smrxE6sTKslRE9")
-        
-        // [Optional] Track statistics around application opens.
-        //PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }
     /*
     public func LogIn(user: PUser) -> PUser{
@@ -35,7 +32,22 @@ public class DALModule : PDALModule{
     public init(){
         
     }
+    
+    public func CurrentUser()->(PUser?){
+        var currentUser = PFUser.currentUser()
+        if currentUser == nil{
+            return nil
+        }
+        var file = currentUser!["profilePhoto"] as! PFFile
+        let image = try! UIImage(data: file.getData())
+        var user = User(userName: currentUser!.username!, photo: image)
+        return user
+    }
 }
+
+
+
+
 
 
 

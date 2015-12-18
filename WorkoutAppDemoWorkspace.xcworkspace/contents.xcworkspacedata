@@ -3,6 +3,10 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "3rd parties">
+   </Group>
+   <Group
+      location = "container:"
       name = "Charts">
       <FileRef
          location = "group:DonutChart/DonutChart.xcodeproj">
@@ -11,6 +15,9 @@
    <Group
       location = "container:"
       name = "Utils">
+      <FileRef
+         location = "group:GeneralExtensions/GeneralExtensions.xcodeproj">
+      </FileRef>
       <FileRef
          location = "group:ServiceLocatorDI/ServiceLocatorDI.xcodeproj">
       </FileRef>

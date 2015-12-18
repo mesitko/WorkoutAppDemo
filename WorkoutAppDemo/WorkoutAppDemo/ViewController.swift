@@ -8,78 +8,213 @@
 
 import Parse
 import Bolts
-//import WorkoutDALParse
+import WorkoutDALParse
 
 import UIKit
 import ServiceLocatorDI
 import WorkoutProtocols
 import DonutChart
+import GeneralExtensions
 
-class ViewController: UIViewController {
+import ParseUI
 
+class ViewController: UIViewController, PFLogInViewControllerDelegate {
+    // variables
+    var donutView : DonutView?
+    var logInController : PFLogInViewController?
+
+    
+    // outlets
+    @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak var userLabel : UILabel!
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var dateFromPicker : UIDatePicker!
+    @IBOutlet weak var dateToPicker : UIDatePicker!
+    @IBOutlet weak var progressView : UIProgressView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let dalRepo = ServiceLocator.Get(PSportActivitiesRepository.self)
-        //dalRepo?.GetActiviies(NSDate(), endsAt: NSDate())
-        
-        /*
-        let chartView = DonutView(frame: CGRect(x:50.0, y:50.0, width: 250.0, height: 250.0))
-        self.view.addSubview(chartView)
-        //chartView.animateCircle(10)
-        
-        let data = ["running": 0.5, "karate":0.3, "swimming" : 0.2]
-        let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.blackColor(), UIColor.yellowColor()]
-        
-        chartView.defineDate( data, colors: colors)
-        chartView.animeteChart(3)
-        
-        delay(6){
-            print("it is time!")
-            chartView.animateClear(1)
-        }
-        */
-        
-        PFUser.logInWithUsernameInBackground("bruce.lee", password:"hit123") {
-            (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                print("Loggend in")
-                
-                var currentUser = PFUser.currentUser()
-                var photo = currentUser!["profilePhoto"] as! PFFile
-                var image = try! UIImage(data: photo.getData())
-                
-                
-                let chartView = DonutView(frame: CGRect(x:50.0, y:50.0, width: 250.0, height: 250.0))
-                self.view.addSubview(chartView)
-                //chartView.animateCircle(10)
-                
-                let data = ["running": 0.5, "karate":0.3, "swimming" : 0.2]
-                let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.blackColor(), UIColor.yellowColor()]
-                
-                chartView.defineDate( data, colors: colors, userImage: image!)
-                chartView.animeteChart(3)
-                
-                delay(6){
-                    print("it is time!")
-                    chartView.animateClear(1)
-                }
-
-            } else {
-                print("Connot login")
-            }
-        }
-        
+        progressView.alpha = 0.0
+        segment.addTarget(self, action: "segmentedControlValueChanged:", forControlEvents:.TouchUpInside)
+        //let dalRepo = ServiceLocator.Get(PSportActivitiesRepository.self)
     }
     
-   
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        setUserState()
+    }
+    
+    
+    func prepareDonut(activities: [PSportActivity]){
+        if donutView != nil{
+            donutView?.removeFromSuperview()
+            donutView = nil
+        }
+        donutView = DonutView(frame:CGRect(x:100, y:300, width:250, height: 250))
+        self.view.addSubview(donutView!)
+        
+        let data = DataCreator.PrepareData(activities)
+        let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.blackColor(), UIColor.yellowColor()]
+        
+        
+        
+        let userRepo = ServiceLocator.Get(PUserRepo.self)
+        let user = userRepo?.currentUser()
+        
+        self.donutView!.defineDate( data, colors: colors, userImage: user!.photo!)
+        self.donutView!.animeteChart(3)
+    }
+    
+    func datePickersState(){
+        if( segment.selectedSegmentIndex == 0){
+            dateFromPicker.hidden = false;
+            dateToPicker.hidden = true;
+        }
+        else{
+            dateFromPicker.hidden = true;
+            dateToPicker.hidden = false
+        }
+    }
+
+    
+    func setUserState(){
+        
+        let userRepo = ServiceLocator.Get(PUserRepo.self)
+        let user = userRepo?.currentUser()
+        if user != nil{
+            userLabel.text = user?.userName
+            logoutBtn.hidden = false
+            searchBtn.hidden = false
+            dateToPicker.hidden = segment.selectedSegmentIndex != 1
+            dateFromPicker.hidden = segment.selectedSegmentIndex != 0
+            segment.hidden = false
+        }
+        else{
+            userLabel.text = ""
+            logoutBtn.hidden = true;
+            searchBtn.hidden = true
+            dateToPicker.hidden = true
+            dateFromPicker.hidden = true
+            segment.hidden = true
+            
+            if( logInController == nil){
+                logInController = PFLogInViewController()
+                logInController!.fields = .UsernameAndPassword
+                logInController!.delegate = self
+            }
+            self.presentViewController(logInController!, animated:true, completion: nil)
+        }
+    }
+    
+    func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser!) -> Void {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        if user != nil{
+            print("Logged in")
+        }
+        else{
+            print("Cannot login")
+        }
+        setUserState()
+    }
+    
+    func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        print("login cancelled")
+    }
+    
+    @IBAction func logOut(sender: UIButton) {
+        let userRepo = ServiceLocator.Get(PUserRepo.self)
+        let user = userRepo?.currentUser()
+        if( user != nil){
+            userRepo?.logOut()
+        }
+        setUserState()
+    }
+    
+    @IBAction func segmentChanged(sender: UISegmentedControl) {
+        //print("changed")
+        datePickersState()
+    }
+    
+    @IBAction func search(sender: UIButton) {
+        performSearch()
+    }
+    
+    func performSearch()->(){
+        if donutView != nil{
+            donutView!.animateClear(1)
+        }
+        
+        self.transformToProgress()
+        
+        let repo = ServiceLocator.Get(PSportActivitiesRepository.self)
+        var sumProgress = Float(0.0)
+        
+        repo!.Get(dateFromPicker.date, dateToPicker.date, {(f: Float) -> () in sumProgress += f
+            self.progressView.progress = sumProgress},  {(results: [PSportActivity] )-> () in
+                self.transformToDone()
+                self.prepareDonut(results)
+            },
+            {(error: NSError?)->() in
+                print("error during getting data")
+                self.transformToDone()
+        })
+    }
+    
+    
+    func transformToProgress(){
+        self.progressView.progress = 0
+        UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.searchBtn.alpha = 0
+            self.segment.alpha = 0
+            self.dateFromPicker.alpha = 0
+            self.dateToPicker.alpha = 0
+            self.logoutBtn.alpha = 0
+            self.userLabel.alpha = 0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(2, delay: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.progressView.alpha = 1.0
+            }, completion: nil)
+    }
+    
+    func transformToDone(){
+
+        self.progressView.progress = 1
+        UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.progressView.alpha = 0.0
+            }, completion: nil)
+        
+        UIView.animateWithDuration(2, delay: 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.searchBtn.alpha = 1
+            self.segment.alpha = 1
+            self.dateFromPicker.alpha = 1
+            self.dateToPicker.alpha = 1
+            self.logoutBtn.alpha = 1
+            self.userLabel.alpha = 1
+            }, completion: nil)
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

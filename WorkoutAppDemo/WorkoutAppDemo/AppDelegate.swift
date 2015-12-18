@@ -25,21 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        // register types
         ServiceLocator.Register({()->PDALModule in return DALModule() })
         ServiceLocator.Register({()->PSportActivitiesRepository in return SportActivitiesRepository() })
+        ServiceLocator.Register({()->PUserRepo in return UserRepo()})
         
+        // set up data access layer
         let dalModule = ServiceLocator.Get(PDALModule.self)
-        
-        //dalModule!.SetUp()
-
-        
-        Parse.enableLocalDatastore()
-        
-        // Initialize Parse.
-        Parse.setApplicationId("7gwmIKcCH00O9C21u1rEhwvnihsZkflY24rD1PEH",
-            clientKey: "d4INr8zQ9ICM3jaViDrCHXv2i7smrxE6sTKslRE9")
-
-        
+        dalModule!.SetUp()
         
         return true
     }

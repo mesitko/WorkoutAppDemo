@@ -9,6 +9,10 @@
 import Foundation
 
 
+public typealias RepoTickProgressBlock = (Float)->Void
+public typealias RepoAllDone = ([PSportActivity]) -> Void
+public typealias ErrorBlock = (NSError?) -> Void
+
 public protocol PSportActivitiesRepository{
-    func GetActiviies(startsAt: NSDate, endsAt: NSDate)-> ()/*-> [PSportActivity]*/
+    func Get( dateFrom: NSDate, _ dateTo: NSDate, _ progresTick: RepoTickProgressBlock, _ repoDone : RepoAllDone, _ error : ErrorBlock)
 }

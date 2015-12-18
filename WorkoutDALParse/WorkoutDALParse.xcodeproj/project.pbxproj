@@ -11,6 +11,8 @@
 		3E1B55251C1FA05A00682C5D /* WorkoutProtocols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1B55241C1FA05A00682C5D /* WorkoutProtocols.framework */; };
 		3E1B55271C1FA13300682C5D /* SportActivitiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */; };
 		3E1B55291C1FA19700682C5D /* SportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1B55281C1FA19700682C5D /* SportActivity.swift */; };
+		3E3409F81C24B2B500DD5431 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3409F71C24B2B500DD5431 /* User.swift */; };
+		3E3409FA1C24B2BF00DD5431 /* UserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3409F91C24B2BF00DD5431 /* UserRepo.swift */; };
 		3E5B0ED91C1F9CD600292A8E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED71C1F9CD600292A8E /* Bolts.framework */; };
 		3E5B0EDA1C1F9CD600292A8E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED71C1F9CD600292A8E /* Bolts.framework */; };
 		3E5B0EDB1C1F9CD600292A8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5B0ED81C1F9CD600292A8E /* Parse.framework */; };
@@ -45,6 +47,8 @@
 		3E1B55241C1FA05A00682C5D /* WorkoutProtocols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WorkoutProtocols.framework; path = "../WorkoutProtocols/build/Debug-iphoneos/WorkoutProtocols.framework"; sourceTree = "<group>"; };
 		3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportActivitiesRepository.swift; sourceTree = "<group>"; };
 		3E1B55281C1FA19700682C5D /* SportActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportActivity.swift; sourceTree = "<group>"; };
+		3E3409F71C24B2B500DD5431 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E3409F91C24B2BF00DD5431 /* UserRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepo.swift; sourceTree = "<group>"; };
 		3E5B0ED71C1F9CD600292A8E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3E5B0ED81C1F9CD600292A8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3E5B0EDD1C1F9D9100292A8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -146,6 +150,8 @@
 				3E1B55221C1FA01B00682C5D /* DALModule.swift */,
 				3E1B55261C1FA13300682C5D /* SportActivitiesRepository.swift */,
 				3E1B55281C1FA19700682C5D /* SportActivity.swift */,
+				3E3409F71C24B2B500DD5431 /* User.swift */,
+				3E3409F91C24B2BF00DD5431 /* UserRepo.swift */,
 			);
 			path = WorkoutDALParse;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3409F81C24B2B500DD5431 /* User.swift in Sources */,
 				3E1B55291C1FA19700682C5D /* SportActivity.swift in Sources */,
 				3E1B55231C1FA01B00682C5D /* DALModule.swift in Sources */,
+				3E3409FA1C24B2BF00DD5431 /* UserRepo.swift in Sources */,
 				3E1B55271C1FA13300682C5D /* SportActivitiesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
