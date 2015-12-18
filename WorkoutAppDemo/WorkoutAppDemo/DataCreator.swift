@@ -9,7 +9,7 @@
 import Foundation
 import WorkoutProtocols
 
-
+///Class for generting charting data
 class DataCreator{
     static func PrepareData(activities : [PSportActivity])->[String:Double]{
         var dict = [String:Double]()

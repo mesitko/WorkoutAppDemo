@@ -44,8 +44,8 @@ public class DonutView : UIView{
     // animate chart
     public func animeteChart(duration: NSTimeInterval){
         
-        let width = CGFloat( Float(frame.size.width) - 50.0)
-        let height = CGFloat(Float(frame.size.height) - 50.0)
+        let width = frame.size.width - 10
+        let height = frame.size.width - 10
         self.imageView = UIImageView(frame: CGRect(x: 25.0, y: 25.0, width: width, height: height))
         self.imageView!.image = self.userPhoto
         self.imageView!.alpha = 0.0
@@ -64,7 +64,9 @@ public class DonutView : UIView{
             let startAngle = CGFloat( cyrcleStart + (M_PI * 2.0)*progress)
             let endAngle = startAngle + CGFloat((M_PI * 2.0) * part.1)
             
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: startAngle , endAngle: endAngle, clockwise: true)
+            //let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.width / 2.0), radius: (frame.size.width - 10)/2, startAngle: startAngle , endAngle: endAngle, clockwise: true)
+            let radius = (frame.size.width - 10)/2
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: 25+radius, y: 25+radius), radius: radius, startAngle: startAngle , endAngle: endAngle, clockwise: true)
             
             partLayer.path = circlePath.CGPath
             partLayer.fillColor = UIColor.clearColor().CGColor
@@ -88,7 +90,18 @@ public class DonutView : UIView{
             
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             animation.beginTime = CACurrentMediaTime() + progress * duration
-            print("part: \(part.0): \(part.1) begin time: \(CACurrentMediaTime() + progress * duration)")
+            print("part: \(part.0): \(String(format: "%.2f", part.1*100)) begin time: \(CACurrentMediaTime() + progress * duration)")
+            
+            let label = UILabel()
+            label.text = "\(String(format: "%.2f", part.1*100))% \(part.0)"
+            label.frame = CGRect(x:30, y:300+20*step, width:350, height: 20)
+            label.textColor = colors![step]
+            label.alpha = 0
+            self.addSubview(label)
+            UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                label.alpha = 1.0
+                }, completion: nil)
+
             
             partLayer.addAnimation(animation, forKey: part.0)
             step++
@@ -99,7 +112,7 @@ public class DonutView : UIView{
     
     // rollback animation
     public func animateClear(duration: NSTimeInterval){
-        
+
         UIView.animateWithDuration(duration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.imageView!.alpha = 0.0
             }, completion: nil)
@@ -111,7 +124,8 @@ public class DonutView : UIView{
         let startAngle = CGFloat( cyrcleStart)
         let endAngle = CGFloat(cyrcleEnd)
         
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: startAngle , endAngle: endAngle, clockwise: false)
+        let radius = (frame.size.width - 10)/2
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 25+radius, y: 25+radius), radius: (frame.size.width - 10)/2, startAngle: startAngle , endAngle: endAngle, clockwise: false)
         
         partLayer.path = circlePath.CGPath
         partLayer.fillColor = UIColor.clearColor().CGColor

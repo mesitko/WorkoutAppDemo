@@ -51,17 +51,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
         setUserState()
     }
     
-    
+    /// prepare donut chart
     func prepareDonut(activities: [PSportActivity]){
         if donutView != nil{
             donutView?.removeFromSuperview()
             donutView = nil
         }
-        donutView = DonutView(frame:CGRect(x:100, y:300, width:250, height: 250))
+        donutView = DonutView(frame:CGRect(x:50, y:300, width:250, height: 550))
         self.view.addSubview(donutView!)
         
         let data = DataCreator.PrepareData(activities)
-        let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.blackColor(), UIColor.yellowColor()]
+        let colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.yellowColor(), UIColor.purpleColor(), UIColor.brownColor(), UIColor.orangeColor(), UIColor.grayColor()]
         
         
         
@@ -134,6 +134,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate {
         let user = userRepo?.currentUser()
         if( user != nil){
             userRepo?.logOut()
+            donutView?.animateClear(3)
+            donutView?.removeFromSuperview()
+            donutView = nil
         }
         setUserState()
     }
